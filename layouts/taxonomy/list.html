@@ -36,7 +36,7 @@
                         </div>
                         <div class="item">
                             <span class="item-date">
-                                Published&nbsp;on&nbsp;{{- $.Site.Params.list.dateFormat | default "01-02" | .Date.Format -}}
+                                {{- T "publishedOnDate" | safeHTML -}}{{- $.Site.Params.list.dateFormat | default "01-02" | .Date.Format -}}
                             </span>
                         </div>
                     </div>
