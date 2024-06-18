@@ -201,3 +201,9 @@ other = "CHANGED"
 [deleted]
 other = "DELETED"
 # === shortcodes/version.html ===
+
+[previousPost]
+other = "Previous Post"
+
+[nextPost]
+other = "Next Post"

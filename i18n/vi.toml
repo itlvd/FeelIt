@@ -134,7 +134,7 @@ other = "Cập nhật ngày {{ .Date }}"
 other = "Đọc với định dạng Markdown"
 
 [improveArticle]
-other = "Improve Article"
+other = "Cải thiện bài viết"
 
 [back]
 other = "Quay lại"
@@ -204,3 +204,8 @@ other = "THAY ĐỔI"
 [deleted]
 other = "XOÁ"
 # === shortcodes/version.html ===
+[previousPost]
+other = "Bài viết trước"
+
+[nextPost]
+other = "Bài viết tiếp theo"
