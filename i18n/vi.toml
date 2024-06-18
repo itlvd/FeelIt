@@ -108,10 +108,10 @@ other = "Nội dung"
 other = "đăng ngày {{ .Date }}"
 
 [publishedInCategories]
-other = "xuất bản năm {{ .Categories }}"
+other = "trong mục {{ .Categories }}"
 
 [includedInCategories]
-other = "bao gồm trong {{ .Categories }}"
+other = "trong {{ .Categories }}"
 
 [wordCount]
 one = "One word"
