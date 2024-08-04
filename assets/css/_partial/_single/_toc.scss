@@ -55,7 +55,7 @@
   border-left: 4px solid $global-font-secondary-color;
   @include overflow-wrap(break-word);
   box-sizing: border-box;
-  left: 0;
+  left: 0 !important;
   visibility: hidden;
 
   [data-header-desktop=normal] & {
