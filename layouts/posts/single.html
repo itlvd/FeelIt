@@ -107,9 +107,11 @@
 
         {{- /* Comment */ -}}
         <button id="load-comment-btn">Load Comment</button>
+        <div id="comment-section"></div>
 
         <script>
             document.getElementById("load-comment-btn").addEventListener("click", function() {
+                document.getElementById("load-comment-btn").style.display = "none";
                         document.getElementById("comment-section").innerHTML = `{{- partial "comment.html" . -}}`;
             });
         </script>
