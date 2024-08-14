@@ -395,6 +395,8 @@ class Theme {
 
     initSeries() {
         const $series = document.getElementsByClassName('posts-series')[0];
+        if($series === null || $series === undefined) return;
+
         const $page = document.getElementsByClassName('page')[0];
         const rect = $page.getBoundingClientRect();
         $series.style.left = `${rect.left + rect.width + 10}px`;
