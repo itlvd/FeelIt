@@ -18,7 +18,12 @@
         </div>
     {{- end -}}
 
+    {{- /* Collections Nav */ -}}
+    {{- partial "single/collections-nav.html" . -}}
+
     <article class="page single" data-toc="{{ if ne $toc.enable true }}disable{{ else }}enable{{ end }}">
+
+        
 
         {{- /* Featured image */ -}}
         {{- $image := $params.featuredimage -}}

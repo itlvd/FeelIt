@@ -393,6 +393,19 @@ class Theme {
         }
     }
 
+    initSeries() {
+        const $series = document.getElementsByClassName('posts-series')[0];
+        const $page = document.getElementsByClassName('page')[0];
+        const rect = $page.getBoundingClientRect();
+        $series.style.left = `${rect.left + rect.width + 10}px`;
+        $series.style.maxWidth = `${$page.getBoundingClientRect().left - 10}px`;
+        $series.style.visibility = 'visible';
+        const headerIsFixed = document.body.getAttribute('data-header-desktop') !== 'normal';
+        const headerHeight = document.getElementById('header-desktop').offsetHeight;
+        const TOP_SPACING = 20 + (headerIsFixed ? headerHeight : 0);
+        $series.style.top = `${TOP_SPACING}px`;
+    }
+
     initToc() {
         const $tocCore = document.getElementById('TableOfContents');
         if ($tocCore === null) return;
@@ -729,6 +742,7 @@ class Theme {
                     this._resizeTimeout = null;
                     for (let event of this.resizeEventSet) event();
                     this.initToc();
+                    this.initSeries();
                     this.initMermaid();
                     this.initSearch();
                 }, 100);
@@ -767,6 +781,7 @@ class Theme {
 
         window.setTimeout(() => {
             this.initToc();
+            this.initSeries();
             this.initComment();
 
             this.onScroll();
