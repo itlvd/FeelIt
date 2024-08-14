@@ -4,7 +4,7 @@
   {{ $has_series := $series | len }}
   {{ if gt $has_series 1 }}
   <div class="posts-series">
-    <strong><em>{{ .Params.series }}</em> series</strong>
+    <strong>{{ .Params.series }}</strong>
     <ul>
       {{- range $series -}}
         <li>
